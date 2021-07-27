@@ -1,1 +1,15 @@
-<h2>Gallery</h2>
+<h2>Super Rentals Gallery</h2>
+<p>We hope you find exactly what you're looking for in a place to stay.</p>
+
+<Swiper as |swiper|>
+  {{#each @model as |rental|}}
+    <swiper.slide>
+      <LinkTo @route="rental" @model={{rental}}>
+        <img class="slide-image" src="{{rental.image}}" alt="{{rental.title}}" />
+      </LinkTo>
+    </swiper.slide>
+  {{/each}}
+
+  <swiper.navigation />
+</Swiper>
+

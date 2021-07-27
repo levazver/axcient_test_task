@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
-@import "custom-toggle.css";
+@import "custom-toggle";
+@import "swiper";
 
 /**
  * Base Elements
@@ -64,6 +65,7 @@ p {
 .button:hover {
   opacity: 1;
 }
+
 /**
  * Body Container
  */
@@ -74,6 +76,7 @@ p {
   background: #f9f9f9;
   margin: 0 auto;
 }
+
 /**
  * Top Navigation
  */
@@ -187,6 +190,7 @@ p {
 .menu .results li:hover {
   background: #f3f3f3;
 }
+
 /**
  * Content Area
  */
@@ -194,6 +198,7 @@ p {
 .body {
   padding: 15px;
 }
+
 /**
  * Similar to Jumbotron
  */
@@ -463,12 +468,15 @@ p {
   top: -25px;
 }
 
-.screen-reader{
+.screen-reader {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 }
 
 .ember-view.active {
@@ -478,9 +486,16 @@ p {
 
 body {
   transition: filter .3s ease;
-  filter:  brightness(1) contrast(1);
+  filter: brightness(1) contrast(1);
+
+  &.dark-mode {
+    background: darkgray;
+    filter: brightness(.7) contrast(1.2);
+  }
 }
 
-body.dark-mode {
-  filter:  brightness(.7) contrast(1.2);
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

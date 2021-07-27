@@ -50,5 +50,13 @@ module.exports = function (environment) {
   ENV.MAPBOX_ACCESS_TOKEN =
     'pk.eyJ1IjoibGV2YXp2ZXIiLCJhIjoiY2tya2xmbW83MGwyZDJwbGZ5NzVyYnBtYyJ9.Lkj9U_9bgAvT7LnojUCZWQ';
 
+  ENV['ember-swiper6'] = {
+    imports: ['navigation', 'mousewheel'],
+    mousewheel: {
+      invert: true,
+    },
+    loop: false,
+  };
+
   return ENV;
 };
